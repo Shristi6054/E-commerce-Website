@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import '../CSSFile/nav&footer.css';
 import {BrowserRouter as Router, Link, Route,Routes} from 'react-router-dom';
 import Home from './Home';
@@ -12,23 +12,32 @@ import { FaYoutube } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 
 function NavbarFooter() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const menu = () => {
+        setMenuOpen(!menuOpen);
+    }
+    
     return(
         <Router>
             <div>
-                <div className='Nav-header'>
+                <nav className='Navbar'>
                     <div className='App-logo'>
                         <h1>Logo</h1>
                     </div>
-                    <nav className='Navbar'>
-                        <ul className='nav-links'>
-                            <li><Link to = "/">Home</Link></li>
-                            <li><Link to = "/product">Product</Link></li>
-                            <li><Link to = "/category">Category</Link></li>
-                            <li><Link to = "/cart">Cart</Link></li>
-                            <li><Link to = "/inquiry">Inquiry</Link></li>
-                        </ul>
-                    </nav>
-                </div>
+                    <div className='menu' onClick={menu}>
+                        <div className='menu-icons'></div>
+                        <div className='menu-icons'></div>
+                        <div className='menu-icons'></div>
+                    </div>
+                    <ul className={menuOpen ? 'nav-links active' : 'nav-links' }>
+                        <li><Link to = "/" onClick={menu}>Home</Link></li>
+                        <li><Link to = "/product" onClick={menu}>Product</Link></li>
+                        <li><Link to = "/category"onClick={menu}>Category</Link></li>
+                        <li><Link to = "/cart" onClick={menu}>Cart</Link></li>
+                        <li><Link to = "/inquiry" onClick={menu}>Inquiry</Link></li>
+                    </ul>
+                </nav>
+                
 
                 <Routes>
                     <Route exact path='/' Component={Home}/>

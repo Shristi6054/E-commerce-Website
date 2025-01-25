@@ -5,6 +5,8 @@
   .App-logo {
     height: 10vmin;
     pointer-events: none;
+    color:white;
+    margin:1rem;
   }
   
   .App-logo h1{
@@ -17,14 +19,14 @@
     }
   }
   
-  .Nav-header {
+  /* .Nav-header {
     background-color: #5bc55b;
     min-height: 15vh;
     display: flex;
     justify-content: space-between;
     font-size: calc(10px + 2vmin);
     color: white;
-  }
+  } */
   
   .App-link {
     color: #61dafb;
@@ -43,25 +45,73 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:aliceblue;
-    padding: 1rem 2rem;
+    background-color: #0f0f0f;
+    position:sticky;
+    padding:1rem;
   }
   
   .nav-links{
     display: flex;
     margin:0;
     padding:0;
-    list-style: none;
   }
   
   .nav-links li{
     margin:0 1rem;
+    list-style: none;
   }
   
   .nav-links li a{
+    display:block;
     text-decoration: none;
     color:white;
     font-size: 1.2rem;
+    padding:0.5rem;
+  }
+
+  .nav-links li a:hover{
+    color:green;
+  }
+
+
+  .menu{
+    display:flex;
+    flex-direction: column;
+  }
+
+   .menu-icons{
+    display: none;
+    font-size: 2rem;
+    color:white;
+    background: none;
+    cursor: pointer;
+    width:26px;
+    height: 3px;
+    margin:2px 0;
+    background-color: white;
+  }
+
+  @media (max-width:600px) {
+    .nav-links{
+      display:none;
+      position:absolute;
+      flex-direction: column;
+      width:100%;
+      top:60px;
+      right:0;
+      background-color: #333;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-links.active{
+      display:flex;
+    }
+
+    .menu-icons{
+      display: block;
+    }
+
   }
   
   /* Home css */
