@@ -1,0 +1,16 @@
+.discount{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color:rgb(188, 3, 3);
+}
+
+.banner{
+    opacity: 0.5;
+    
+}
+
+.background-image{
+    height: 500px;
+    width: 1256px;
+}
