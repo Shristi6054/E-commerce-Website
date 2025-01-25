@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f0f0f;
+    background-color: #5bc55b;
     position:sticky;
     padding:1rem;
   }
@@ -97,7 +97,7 @@
       position:absolute;
       flex-direction: column;
       width:100%;
-      top:60px;
+      top:80px;
       right:0;
       background-color: #333;
       justify-content: center;
@@ -141,5 +141,13 @@
   .foot-icons{
     display:flex;
     justify-content: space-between;
+  }
+  @media (max-width:600px) {
+    .footer{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
