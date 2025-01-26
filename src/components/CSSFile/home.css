@@ -6,11 +6,197 @@
 }
 
 .banner{
-    opacity: 0.5;
-    
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/background-home.jpg');   
 }
 
-.background-image{
-    height: 500px;
-    width: 1256px;
+.new-items{
+   width:1000px;
+   display: flex;
+   overflow-x:scroll;
+   margin:1% auto;
+}
+
+.items{
+    width:100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:20px;
+    padding: 10px;
+    flex:none;
+}
+
+.new-items::-webkit-scrollbar{
+    display: none;
+}
+
+
+.items .item{
+    width: 480px;
+    filter:grayscale(100%);
+    transition: transform 0.5s;
+}
+
+
+.item:hover{
+    filter: grayscale(0);
+    cursor:pointer;
+    transform: scale(1.1);
+}
+
+.shop-description{
+    display:grid;
+    grid-template-areas: 
+    "description brand-image";
+    grid-template-rows: 1fr 2fr;
+    background-color: #aff2af;
+    margin: 50px auto;
+    height:350px;
+}
+
+.description{
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    margin:auto auto;
+}
+
+.description button{
+    background-color: #58cb58;
+    border:none;
+    height:30px;
+    width:100px;
+    border-radius: 20px;
+    font-weight: bold;
+    color:rgb(48, 48, 48);
+}
+
+.description p{
+    color:rgb(67, 67, 67);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+}
+.description button:hover{
+    background-color:aqua;
+}
+
+.brand-image img{
+    width:70%;
+    height:300px;
+    margin:auto;
+    align-items: center;
+}
+
+.news-letter{
+    margin:50px;
+    padding:0;
+}
+
+.news-letter p{
+    color:rgb(67, 67, 67);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+}
+
+.news-letter input{
+    padding:15px 100px;
+    border:none;
+    background-color: #e9fae9;
+}
+
+.news-letter button{
+    background-color: #58cb58;
+    border:none;
+    padding:15px 35px;
+}
+
+@media (max-width:650px) {
+    .banner{
+        width:100%;
+        height:500px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h2{
+        font-size:1.1rem;
+    }
+
+    .new-items{
+        width:450px;
+        display: flex;
+        overflow-x:scroll;
+        margin:1% auto;
+     }
+     
+     .items{
+         width:100%;
+         display: grid;
+         grid-template-columns: auto auto auto;
+         grid-gap:20px;
+         padding: 10px;
+         flex:none;
+     }
+     
+     .new-items::-webkit-scrollbar{
+         display: none;
+     }
+     
+     
+     .items .item{
+         width: 450px;
+         height:350px;
+         filter:grayscale(100%);
+         transition: transform 0.5s;
+     }
+     
+     
+     .item:hover{
+         filter: grayscale(0);
+         cursor:pointer;
+         transform: scale(1.1);
+    }
+
+    .shop-description{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .description{
+        margin:auto 10px;
+        text-align: center;
+    }
+
+    .description p{
+        font-size: 0.6rem;
+    }
+
+    .brand-image{
+        width: 100%;
+    }
+
+    .news-letter{
+        text-align: center;
+    }
+
+    .news-letter input{
+        padding:10px 50px;
+        font-size: 0.6rem;
+    }
+
+    .news-letter p{
+        font-size:0.7rem;
+    }
+
+    .news-letter button{
+        padding:8px 45px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color:rgb(208, 75, 75);
+    }
 }

@@ -91,7 +91,7 @@
     background-color: white;
   }
 
-  @media (max-width:600px) {
+  @media (max-width:650px) {
     .nav-links{
       display:none;
       position:absolute;
@@ -142,7 +142,7 @@
     display:flex;
     justify-content: space-between;
   }
-  @media (max-width:600px) {
+  @media (max-width:650px) {
     .footer{
       display:flex;
       flex-direction: column;
