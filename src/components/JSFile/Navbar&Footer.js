@@ -3,8 +3,6 @@ import '../CSSFile/nav&footer.css';
 import {BrowserRouter as Router, Link, Route,Routes} from 'react-router-dom';
 import Home from './Home';
 import Product from './Product';
-import Category from './Category';
-import Cart from './Cart';
 import Inquiry from './Inquiry';
 import { FaFacebook } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
@@ -32,8 +30,6 @@ function NavbarFooter() {
                     <ul className={menuOpen ? 'nav-links active' : 'nav-links' }>
                         <li><Link to = "/" onClick={menu}>Home</Link></li>
                         <li><Link to = "/product" onClick={menu}>Product</Link></li>
-                        <li><Link to = "/category"onClick={menu}>Category</Link></li>
-                        <li><Link to = "/cart" onClick={menu}>Cart</Link></li>
                         <li><Link to = "/inquiry" onClick={menu}>Inquiry</Link></li>
                     </ul>
                 </nav>
@@ -42,8 +38,6 @@ function NavbarFooter() {
                 <Routes>
                     <Route exact path='/' Component={Home}/>
                     <Route path='/product' Component={Product}/>
-                    <Route path='/category' Component={Category}/>
-                    <Route path='/cart' Component={Cart}/>
                     <Route path='/Inquiry' Component={Inquiry}/>
                 </Routes>
 
@@ -64,8 +58,6 @@ function NavbarFooter() {
                         <ul className='links'>
                             <li><Link to = "/">Home</Link></li>
                             <li><Link to = "/product">Product</Link></li>
-                            <li><Link to = "/category">Category</Link></li>
-                            <li><Link to = "/cart">Cart</Link></li>
                             <li><Link to = "/inquiry">Inquiry</Link></li>
                         </ul>
                     </div>
